@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             decimal countryBudget = 20_000_000_000;
-            decimal percentageOfMod = 20; //MOF - Ministry of Defence
+            decimal percentageOfMod = 20; //MOD - Ministry of Defence
             decimal percentageOfmoht = 20; //MOHT - Ministry of high tech
 
             decimal budgetOfMod = countryBudget * percentageOfMod / 100;
