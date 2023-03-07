@@ -7,6 +7,9 @@
             Console.Write("Pls enter brand count : ");
             int brandCount = int.Parse(Console.ReadLine());
             decimal total = 0;
+            decimal totalWithDiscount = 0;
+            decimal discountPercentage = 20;
+            decimal discountStartNumber = 5;
 
             while (brandCount >= 1)
             {
@@ -19,16 +22,22 @@
                 Console.Write("Price of shoes : ");
                 decimal priceOfShoesFromBrand = decimal.Parse(Console.ReadLine());
                 decimal totalPriceFromBrand = countOfShoesFromBrand * priceOfShoesFromBrand;
-                total = total + totalPriceFromBrand;
+                decimal totalPriceFromBrandWithDiscount = totalPriceFromBrand;
 
                 Console.WriteLine();
                 Console.WriteLine("Firma : " + brandName);
                 Console.WriteLine("Ayaqqabı sayı : " + countOfShoesFromBrand);
                 Console.WriteLine("Birinin qiyməti ($) : " + priceOfShoesFromBrand);
                 Console.WriteLine("Hamısının birlikdə qiyməti ($) : " + totalPriceFromBrand);
+                if (countOfShoesFromBrand > discountStartNumber)
+                {
+                    totalPriceFromBrandWithDiscount = totalPriceFromBrandWithDiscount - totalPriceFromBrandWithDiscount * discountPercentage / 100;
+                    Console.WriteLine("Hamısının birlikdə endirimli qiyməti ($) : " + totalPriceFromBrandWithDiscount);
+                }
+
                 Console.WriteLine("############################################################################");
 
-                //brandCount = brandCount - 1;
+                total = total + totalPriceFromBrandWithDiscount;
                 brandCount -= 1;
             }
 
