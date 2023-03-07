@@ -25,25 +25,31 @@
                 decimal totalPriceFromBrandWithDiscount = totalPriceFromBrand;
 
                 Console.WriteLine();
-                Console.WriteLine("Firma : " + brandName);
-                Console.WriteLine("Ayaqqabı sayı : " + countOfShoesFromBrand);
-                Console.WriteLine("Birinin qiyməti ($) : " + priceOfShoesFromBrand);
-                Console.WriteLine("Hamısının birlikdə qiyməti ($) : " + totalPriceFromBrand);
+                Console.WriteLine($"Firma : {brandName}"); //string interpolation
+                Console.WriteLine($"Ayaqqabı sayı : {countOfShoesFromBrand}");
+                Console.WriteLine($"Birinin qiyməti ($) : {priceOfShoesFromBrand}");
+                Console.WriteLine($"Hamısının birlikdə qiyməti ($) : {totalPriceFromBrand}");
                 if (countOfShoesFromBrand > discountStartNumber)
                 {
                     totalPriceFromBrandWithDiscount = totalPriceFromBrandWithDiscount - totalPriceFromBrandWithDiscount * discountPercentage / 100;
-                    Console.WriteLine("Hamısının birlikdə endirimli qiyməti ($) : " + totalPriceFromBrandWithDiscount);
+                    Console.WriteLine($"Hamısının birlikdə endirimli qiyməti ($) : {totalPriceFromBrandWithDiscount}");
                 }
 
                 Console.WriteLine("############################################################################");
 
-                total = total + totalPriceFromBrandWithDiscount;
+                total = total + totalPriceFromBrand;
+                totalWithDiscount = totalWithDiscount + totalPriceFromBrandWithDiscount;
                 brandCount -= 1;
             }
 
             Console.WriteLine();
-            Console.WriteLine("Yekun");
-            Console.WriteLine(total);
+            Console.WriteLine($"Yekun : {total}");
+
+            if (total != totalWithDiscount)
+            {
+                Console.WriteLine($"(Yekun) Endirimli : {totalWithDiscount}");
+            }
+
 
             //Console.Write("Brand name : ");
             //string firstBrandName = Console.ReadLine();
