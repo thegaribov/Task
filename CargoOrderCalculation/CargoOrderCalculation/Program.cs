@@ -4,42 +4,92 @@
     {
         static void Main(string[] args)
         {
-            string firstBrandName = "Adidas";
-            int countOfShoesFromFirstBrand = 4;
-            decimal priceOfShoesFromFirstBrand = 200;
-            decimal totalPriceFromFirstBrand = countOfShoesFromFirstBrand * priceOfShoesFromFirstBrand;
+            Console.Write("Pls enter brand count : ");
+            int brandCount = int.Parse(Console.ReadLine());
+            decimal total = 0;
 
-            string secondBrandName = "Gucci";
-            int countOfShoesFromSecondBrand = 2;
-            decimal priceOfShoesFromSecondBrand = 1000;
-            decimal totalPriceFromSecondBrand = countOfShoesFromSecondBrand * priceOfShoesFromSecondBrand;
+            while (brandCount >= 1)
+            {
+                Console.Write("Brand name : ");
+                string brandName = Console.ReadLine();
 
-            string thirdBrandName = "Nike";
-            int countOfShoesFromThirdBrand = 1;
-            decimal priceOfShoesFromThirdBrand = 150;
-            decimal totalPriceFromThirdBrand = countOfShoesFromThirdBrand * priceOfShoesFromThirdBrand;
+                Console.Write("Count of shoes : ");
+                int countOfShoesFromBrand = int.Parse(Console.ReadLine());
 
-            decimal totalPrice = totalPriceFromFirstBrand + totalPriceFromSecondBrand + totalPriceFromThirdBrand;
+                Console.Write("Price of shoes : ");
+                decimal priceOfShoesFromBrand = decimal.Parse(Console.ReadLine());
+                decimal totalPriceFromBrand = countOfShoesFromBrand * priceOfShoesFromBrand;
+                total = total + totalPriceFromBrand;
 
-            Console.WriteLine("Firma : " + firstBrandName);
-            Console.WriteLine("Ayaqqabı sayı : " + countOfShoesFromFirstBrand);
-            Console.WriteLine("Birinin qiyməti ($) : " + priceOfShoesFromFirstBrand);
-            Console.WriteLine("Hamısının birlikdə qiyməti ($) : " + totalPriceFromFirstBrand);
+                Console.WriteLine();
+                Console.WriteLine("Firma : " + brandName);
+                Console.WriteLine("Ayaqqabı sayı : " + countOfShoesFromBrand);
+                Console.WriteLine("Birinin qiyməti ($) : " + priceOfShoesFromBrand);
+                Console.WriteLine("Hamısının birlikdə qiyməti ($) : " + totalPriceFromBrand);
+                Console.WriteLine("############################################################################");
 
-            Console.WriteLine();
-            Console.WriteLine("Firma : " + secondBrandName);
-            Console.WriteLine("Ayaqqabı sayı : " + countOfShoesFromSecondBrand);
-            Console.WriteLine("Birinin qiyməti ($) : " + priceOfShoesFromSecondBrand);
-            Console.WriteLine("Hamısının birlikdə qiyməti ($) : " + totalPriceFromSecondBrand);
-
-            Console.WriteLine();
-            Console.WriteLine("Firma : " + thirdBrandName);
-            Console.WriteLine("Ayaqqabı sayı : " + countOfShoesFromThirdBrand);
-            Console.WriteLine("Birinin qiyməti ($) : " + priceOfShoesFromThirdBrand);
-            Console.WriteLine("Hamısının birlikdə qiyməti ($) : " + totalPriceFromThirdBrand);
+                //brandCount = brandCount - 1;
+                brandCount -= 1;
+            }
 
             Console.WriteLine();
-            Console.WriteLine("Total :" + totalPrice);
+            Console.WriteLine("Yekun");
+            Console.WriteLine(total);
+
+            //Console.Write("Brand name : ");
+            //string firstBrandName = Console.ReadLine();
+
+            //Console.Write("Count of shoes : ");
+            //int countOfShoesFromFirstBrand = int.Parse(Console.ReadLine());
+
+            //Console.Write("Price of shoes : ");
+            //decimal priceOfShoesFromFirstBrand = decimal.Parse(Console.ReadLine());
+            //decimal totalPriceFromFirstBrand = countOfShoesFromFirstBrand * priceOfShoesFromFirstBrand;
+
+            //Console.Write("Brand name : ");
+            //string secondBrandName = Console.ReadLine();
+
+            //Console.Write("Count of shoes : ");
+            //int countOfShoesFromSecondBrand = int.Parse(Console.ReadLine());
+
+            //Console.Write("Price of shoes : ");
+            //decimal priceOfShoesFromSecondBrand = decimal.Parse(Console.ReadLine());
+            //decimal totalPriceFromSecondBrand = countOfShoesFromSecondBrand * priceOfShoesFromSecondBrand;
+
+
+            //Console.Write("Brand name : ");
+            //string thirdBrandName = Console.ReadLine();
+
+            //Console.Write("Count of shoes : ");
+            //int countOfShoesFromThirdBrand = int.Parse(Console.ReadLine());
+
+            //Console.Write("Price of shoes : ");
+            //decimal priceOfShoesFromThirdBrand = decimal.Parse(Console.ReadLine());
+            //decimal totalPriceFromThirdBrand = countOfShoesFromThirdBrand * priceOfShoesFromThirdBrand;
+
+            //decimal totalPrice = totalPriceFromFirstBrand + totalPriceFromSecondBrand + totalPriceFromThirdBrand;
+
+            //Console.WriteLine();
+
+            //Console.WriteLine("Firma : " + firstBrandName);
+            //Console.WriteLine("Ayaqqabı sayı : " + countOfShoesFromFirstBrand);
+            //Console.WriteLine("Birinin qiyməti ($) : " + priceOfShoesFromFirstBrand);
+            //Console.WriteLine("Hamısının birlikdə qiyməti ($) : " + totalPriceFromFirstBrand);
+
+            //Console.WriteLine();
+            //Console.WriteLine("Firma : " + secondBrandName);
+            //Console.WriteLine("Ayaqqabı sayı : " + countOfShoesFromSecondBrand);
+            //Console.WriteLine("Birinin qiyməti ($) : " + priceOfShoesFromSecondBrand);
+            //Console.WriteLine("Hamısının birlikdə qiyməti ($) : " + totalPriceFromSecondBrand);
+
+            //Console.WriteLine();
+            //Console.WriteLine("Firma : " + thirdBrandName);
+            //Console.WriteLine("Ayaqqabı sayı : " + countOfShoesFromThirdBrand);
+            //Console.WriteLine("Birinin qiyməti ($) : " + priceOfShoesFromThirdBrand);
+            //Console.WriteLine("Hamısının birlikdə qiyməti ($) : " + totalPriceFromThirdBrand);
+
+            //Console.WriteLine();
+            //Console.WriteLine("Total :" + totalPrice);
         }
     }
 }
