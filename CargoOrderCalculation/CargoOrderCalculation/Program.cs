@@ -13,8 +13,20 @@
 
             while (brandCount >= 1)
             {
-                Console.Write("Brand name : ");
-                string brandName = Console.ReadLine();
+                string brandName = "";
+
+                while (true)
+                {
+                    Console.Write("Brand name : ");
+                    brandName = Console.ReadLine();
+
+                    if (brandName.Length > 5 && brandName.Length < 10)
+                    {
+                        break;
+                    }
+                }
+
+
 
                 Console.Write("Count of shoes : ");
                 int countOfShoesFromBrand = int.Parse(Console.ReadLine());
@@ -46,9 +58,8 @@
             Console.WriteLine($"Yekun : {total}");
 
             if (total != totalWithDiscount)
-            {
                 Console.WriteLine($"(Yekun) Endirimli : {totalWithDiscount}");
-            }
+
 
 
             //Console.Write("Brand name : ");
